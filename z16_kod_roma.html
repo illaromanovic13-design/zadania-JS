@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 16 - KOD - Illia Romanovych</title>
+</head>
+<body>
+<textarea cols="90" rows="24">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Zadanie 16 - Illia Romanovych&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="wynik" style="color:navy;font-size:20px;"&gt;
+&lt;script type="text/javascript"&gt;
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 16
+var A_roma = prompt("Podaj pierwszą liczbę  A=", "");
+var B_roma = prompt("Podaj drugą liczbę  B=", "");
+var A = parseInt(A_roma);
+var B = parseInt(B_roma);
+var wynik = Math.pow(A + B, 3);
+document.write("wczytane liczby: &amp;nbsp;&amp;nbsp;&amp;nbsp; A=" + A + " &amp;nbsp;&amp;nbsp; B=" + B + "&lt;br&gt;&lt;br&gt;");
+var linia = "(" + A + " + " + B + ")^3= " + A + "^3 + 3*((" + A + ")^2)*(" + B + ") + 3*(" + A + ")*((" + B + ")^2) + " + B + "^3 = "
+          + Math.pow(A, 3) + " + " + (3 * A * A * B) + " + " + (3 * A * B * B) + " + " + Math.pow(B, 3) + " = " + wynik;
+document.write('&lt;span id="linia2" style="white-space:nowrap;font-size:20px;"&gt;' + linia + '&lt;/span&gt;&lt;br&gt;');
+// dopasowanie wielkości liter tak, aby druga linia zajęła całą szerokość ekranu
+var el = document.getElementById("linia2");
+var szer = document.body.clientWidth - 20;
+var rozm = 20;
+el.style.fontSize = rozm + "px";
+rozm = Math.floor(rozm * szer / el.offsetWidth);
+el.style.fontSize = rozm + "px";
+while (el.offsetWidth &gt; szer &amp;&amp; rozm &gt; 1) { rozm--; el.style.fontSize = rozm + "px"; }
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/&gt;
+&lt;script type="text/javascript"&gt;
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</body>
+</html>

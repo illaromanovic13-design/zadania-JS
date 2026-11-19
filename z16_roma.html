@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 16 - Illia Romanovych</title>
+</head>
+<body>
+<div id="wynik" style="color:navy;font-size:20px;">
+<script type="text/javascript">
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 16
+var A_roma = prompt("Podaj pierwszą liczbę  A=", "");
+var B_roma = prompt("Podaj drugą liczbę  B=", "");
+var A = parseInt(A_roma);
+var B = parseInt(B_roma);
+var wynik = Math.pow(A + B, 3);
+document.write("wczytane liczby: &nbsp;&nbsp;&nbsp; A=" + A + " &nbsp;&nbsp; B=" + B + "<br><br>");
+var linia = "(" + A + " + " + B + ")^3= " + A + "^3 + 3*((" + A + ")^2)*(" + B + ") + 3*(" + A + ")*((" + B + ")^2) + " + B + "^3 = "
+          + Math.pow(A, 3) + " + " + (3 * A * A * B) + " + " + (3 * A * B * B) + " + " + Math.pow(B, 3) + " = " + wynik;
+document.write('<span id="linia2" style="white-space:nowrap;font-size:20px;">' + linia + '</span><br>');
+// dopasowanie wielkości liter tak, aby druga linia zajęła całą szerokość ekranu
+var el = document.getElementById("linia2");
+var szer = document.body.clientWidth - 20;
+var rozm = 20;
+el.style.fontSize = rozm + "px";
+rozm = Math.floor(rozm * szer / el.offsetWidth);
+el.style.fontSize = rozm + "px";
+while (el.offsetWidth > szer && rozm > 1) { rozm--; el.style.fontSize = rozm + "px"; }
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

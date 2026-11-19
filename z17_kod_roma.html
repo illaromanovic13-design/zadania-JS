@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 17 - KOD - Illia Romanovych</title>
+</head>
+<body>
+<textarea cols="90" rows="26">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Zadanie 17 - Illia Romanovych&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Zadanie 17 - zadanie teoretyczne&lt;/h2&gt;
+&lt;p&gt;&lt;b&gt;&lt;u&gt;1. Wymień cztery sposoby wyprowadzania danych w JS&lt;/u&gt;&lt;/b&gt;&lt;br&gt;Cztery sposoby wyprowadzania danych na stronę:&lt;br&gt;- z użyciem &lt;b&gt;document.write()&lt;/b&gt;,&lt;br&gt;- z użyciem okienka &lt;b&gt;alert()&lt;/b&gt;,&lt;br&gt;- do &lt;b&gt;okienek formularza&lt;/b&gt; (np. pole input, właściwość value),&lt;br&gt;- do &lt;b&gt;tabeli&lt;/b&gt; (np. z użyciem innerHTML).&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;u&gt;2. Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?&lt;/u&gt;&lt;/b&gt;&lt;br&gt;a) Jest to &lt;b&gt;zbiór zgrupowanych instrukcji&lt;/b&gt;, które możemy uruchamiać poprzez podanie ich nazwy,&lt;br&gt;b) każda funkcja po wywołaniu &lt;b&gt;wykonuje swój wewnętrzny kod&lt;/b&gt;,&lt;br&gt;c) funkcja może mieć &lt;b&gt;argumenty&lt;/b&gt;, które wchodzą do wnętrza funkcji i są tam przetwarzane, np. suma_rom(a, b),&lt;br&gt;d) może (nie zawsze) &lt;b&gt;zwrócić obliczoną wartość&lt;/b&gt; zapisaną po słowie kluczowym &lt;b&gt;return&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;u&gt;3. Omów metody getElementsByName, getElementById, getElementsByTagName&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;table border="1" cellpadding="5" style="border-collapse:collapse"&gt;
+&lt;tr&gt;&lt;th&gt;Metoda&lt;/th&gt;&lt;th&gt;Opis&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;getElementById("id")&lt;/b&gt;&lt;/td&gt;&lt;td&gt;dostęp do elementu o konkretnej wartości atrybutu &lt;b&gt;id&lt;/b&gt; (id jest unikalne, zwracany jest jeden element)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;getElementsByTagName("znacznik")&lt;/b&gt;&lt;/td&gt;&lt;td&gt;dostęp do wszystkich elementów o danym typie znacznika, np. P lub DIV (zwraca kolekcję elementów)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;getElementsByName("nazwa")&lt;/b&gt;&lt;/td&gt;&lt;td&gt;dostęp do wszystkich elementów o konkretnej wartości atrybutu &lt;b&gt;name&lt;/b&gt; (zwraca kolekcję; pierwszy element: [0])&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;b&gt;&lt;u&gt;4. Omów właściwości innerHTML, innerText, className (każdą osobno)&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;innerHTML&lt;/u&gt;&lt;/b&gt; - właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie albo usunięcie kodu HTML z danego elementu HTML, np. w tabeli,&lt;br&gt;&lt;b&gt;&lt;u&gt;innerText&lt;/u&gt;&lt;/b&gt; - umożliwia określenie ciągu znaków (zwykłego tekstu), który zostanie umieszczony w elemencie,&lt;br&gt;&lt;b&gt;&lt;u&gt;className&lt;/u&gt;&lt;/b&gt; - umożliwia określenie klasy CSS użytej do prezentacji elementu.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Przykład:&lt;/b&gt;&lt;/p&gt;
+&lt;textarea cols="70" rows="9"&gt;&amp;lt;div id="nazwa"&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+  document.getElementById("nazwa").innerHTML = "Witaj";
+  document.getElementById("nazwa").className = "wyroznienieCzerwone";
+&amp;lt;/script&amp;gt;&lt;/textarea&gt;&lt;br&gt;
+&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/&gt;
+&lt;script type="text/javascript"&gt;
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</body>
+</html>

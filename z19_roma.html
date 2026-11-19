@@ -1,0 +1,36 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Zadanie 19 - Illia Romanovych</title>
+ <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ // Illia Romanovych nr 21  19.11.2026
+ // Zadanie 19
+
+ function Pole_romanovych()
+  {
+     var a_rom = parseFloat(document.getElementById('dlugosc').value);
+     var b_rom = a_rom * a_rom;
+     document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_rom.toFixed(2) + " cm^2";
+  }
+ function obwod_romanovych()
+  {
+     var a_rom = parseFloat(document.getElementById('dlugosc').value);
+     var b_rom = 4 * a_rom;
+     document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b_rom.toFixed(2) + " cm";
+  }
+ function okno_zamknij_romanovych()
+  {
+     window.close()
+  }
+</script>
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: &nbsp;&nbsp;&nbsp; <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+ <input type="button" name="pole" value="Oblicz pole" onclick="Pole_romanovych()"><br><br>
+ <input type="button" name="obwod" value="Oblicz obwód" onclick="obwod_romanovych()"><br><br>
+ <div style="color:red;font-size:50px;" id="nazwa"></div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+</body>
+</html>

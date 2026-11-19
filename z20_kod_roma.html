@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 20 - KOD - Illia Romanovych</title>
+</head>
+<body>
+<textarea cols="90" rows="26">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Zadanie 20 - Illia Romanovych&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 20
+
+// pobranie współrzędnych punktów A(xa,ya) B(xb,yb) C(xc,yc) z sześciu okienek formularza
+function pobierz(id) { return parseFloat(document.getElementById(id).value); }
+// odległość między punktami F(x1,y1) i G(x2,y2): sqrt((x1-x2)^2 + (y1-y2)^2)
+function AB_rom(xa_rom, ya_rom, xb_rom, yb_rom)
+{
+  return Math.sqrt(Math.pow(xa_rom - xb_rom, 2) + Math.pow(ya_rom - yb_rom, 2));
+}
+function BC_rom(xb_rom, yb_rom, xc_rom, yc_rom)
+{
+  return Math.sqrt(Math.pow(xb_rom - xc_rom, 2) + Math.pow(yb_rom - yc_rom, 2));
+}
+function AC_rom(xa_rom, ya_rom, xc_rom, yc_rom)
+{
+  return Math.sqrt(Math.pow(xa_rom - xc_rom, 2) + Math.pow(ya_rom - yc_rom, 2));
+}
+function oblicz_boki()
+{
+  var xa_rom = pobierz("xa"), ya_rom = pobierz("ya");
+  var xb_rom = pobierz("xb"), yb_rom = pobierz("yb");
+  var xc_rom = pobierz("xc"), yc_rom = pobierz("yc");
+  document.getElementById("wynik").innerHTML =
+      "|AB| = " + AB_rom(xa_rom, ya_rom, xb_rom, yb_rom).toFixed(2) + "&lt;br&gt;" +
+      "|BC| = " + BC_rom(xb_rom, yb_rom, xc_rom, yc_rom).toFixed(2) + "&lt;br&gt;" +
+      "|AC| = " + AC_rom(xa_rom, ya_rom, xc_rom, yc_rom).toFixed(2);
+}
+&lt;/script&gt;
+&lt;h3&gt;Długości boków trójkąta ABC&lt;/h3&gt;
+A: xa=&lt;input size="5" id="xa" value="0"&gt; ya=&lt;input size="5" id="ya" value="0"&gt;&lt;br&gt;&lt;br&gt;
+B: xb=&lt;input size="5" id="xb" value="4"&gt; yb=&lt;input size="5" id="yb" value="0"&gt;&lt;br&gt;&lt;br&gt;
+C: xc=&lt;input size="5" id="xc" value="0"&gt; yc=&lt;input size="5" id="yc" value="3"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="button" value="oblicz" onclick="oblicz_boki()"&gt;&lt;br&gt;&lt;br&gt;
+&lt;div id="wynik" style="color:navy;font-size:30px;"&gt;&lt;/div&gt;
+&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/&gt;
+&lt;script type="text/javascript"&gt;
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</body>
+</html>

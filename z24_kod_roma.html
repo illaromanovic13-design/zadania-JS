@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 24 - KOD - Illia Romanovych</title>
+</head>
+<body>
+<textarea cols="90" rows="26">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Zadanie 24 - Illia Romanovych&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="background:silver;color:blue;font-family:Arial,sans-serif;font-size:24px;display:inline-block;padding:8px 14px;"&gt;
+&lt;script type="text/javascript"&gt;
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 24
+
+var x1_rom = parseFloat(prompt("x1=", ""));
+var x2_rom = parseFloat(prompt("x2=", ""));
+var liczba_liter_imienia = 5;                       // Illia
+var rad = (x1_rom * Math.PI) / 180;               // x1 ze stopni na radiany
+
+// y1 = 3 * x1^( n / (n+2) ), n = liczba liter imienia
+var y1 = 3 * Math.pow(x1_rom, liczba_liter_imienia / (liczba_liter_imienia + 2));
+// y2 = 2*cos(x1) + 3*sin(x1)   (x1 w stopniach -&gt; radiany)
+var y2 = 2 * Math.cos(rad) + 3 * Math.sin(rad);
+// y3 = pierwiastek 3. stopnia z ( x1^5 + 2*x2^4 ) * |x1 - x2|
+var y3 = Math.cbrt(Math.pow(x1_rom, 5) + 2 * Math.pow(x2_rom, 4)) * Math.abs(x1_rom - x2_rom);
+
+document.write("wczytane liczby:&lt;br&gt;");
+document.write("x1 = " + x1_rom + "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; x2 = " + x2_rom + "&lt;br&gt;");
+document.write("w stopniach x1 = " + x1_rom + " [stopniach] &amp;nbsp; x1 = " + rad.toFixed(2) + " [radianach]&lt;br&gt;");
+document.write("y1 = " + y1.toFixed(2) + "&lt;br&gt;");
+document.write("y2 = " + y2.toFixed(2) + "&lt;br&gt;");
+document.write("y3 = " + y3.toFixed(2) + "&lt;br&gt;");
+&lt;/script&gt;
+&lt;/div&gt;&lt;br&gt;
+&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/&gt;
+&lt;script type="text/javascript"&gt;
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</body>
+</html>

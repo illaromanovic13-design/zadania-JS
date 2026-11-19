@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 23 - Illia Romanovych</title>
+</head>
+<body>
+<script type="text/javascript">
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 23
+
+// długość drabiny z twierdzenia Pitagorasa: l = sqrt(d^2 + x^2)
+function dlugosc_drabiny_rom(d, x)
+{
+  return Math.sqrt(d * d + x * x);
+}
+// kąt nachylenia: alfa = arctg(d / x), zamiana radianów na stopnie
+function kat_drabiny_rom(d, x)
+{
+  return Math.atan(d / x) * 180 / Math.PI;
+}
+function oblicz_drabine()
+{
+  var d = parseFloat(document.getElementById("d").value);
+  var x = parseFloat(document.getElementById("x").value);
+  document.getElementById("drabina").value = dlugosc_drabiny_rom(d, x).toFixed(2);
+  document.getElementById("alfa").value = kat_drabiny_rom(d, x).toFixed(2);
+}
+</script>
+Obliczanie odległości od drabiny i kąta<br><br>
+Podaj d= <input size="6" id="d" value="3"> Podaj x= <input size="6" id="x" value="4"><br><br>
+<input type="button" value="oblicz" onclick="oblicz_drabine()"><br><br>
+Drabina= <input size="6" id="drabina"> m &nbsp; Alfa= <input size="6" id="alfa"> °<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

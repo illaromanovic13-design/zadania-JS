@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 12 - KOD - Illia Romanovych</title>
+</head>
+<body>
+<textarea cols="90" rows="24">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Zadanie 12 - Illia Romanovych&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="wynik"&gt;
+&lt;script type="text/javascript"&gt;
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 12
+var dzien_urodzenia_roma = 29; // dzień urodzenia 29.08.2009 (rozmiar czcionki = 30 + dzień = 59)
+var D1_roma = prompt("D1=", "");
+var G1_roma = prompt("G1=", "");
+var D2_roma = prompt("D2=", "");
+var G2_roma = prompt("G2=", "");
+var sekund;
+var d1 = parseFloat(D1_roma);
+var g1 = parseFloat(G1_roma);
+var d2 = parseFloat(D2_roma);
+var g2 = parseFloat(G2_roma);
+sekund = ((d1 * 24 + g1) - (d2 * 24 + g2)) * 60 * 60;
+var rozmiar = 30 + dzien_urodzenia_roma;
+document.write('&lt;span style="color:green;font-size:' + rozmiar + 'px;"&gt;Ilość sekund między dniem ' + d1 + ', godz. ' + g1 + ' a dniem ' + d2 + ', godz. ' + g2 + ' = ' + sekund + '&lt;/span&gt;&lt;br&gt;');
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/&gt;
+&lt;script type="text/javascript"&gt;
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</body>
+</html>

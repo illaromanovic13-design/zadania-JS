@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 6 - Illia Romanovych</title>
+</head>
+<body>
+<h2>Zadanie 6 - Okienka dialogowe, zmienne, konwersje</h2>
+
+<p><b>1) Rodzaje okienek</b></p>
+<p>W JavaScript wyróżniamy trzy rodzaje okienek dialogowych:<br>
+<b><u>Okienko alert</u></b> - wyświetla okienko dialogowe z informacją i przyciskiem OK,<br>
+<b><u>Okienko prompt</u></b> - generuje okno, w którym użytkownik może wpisać wartość, zwracaną następnie do programu,<br>
+<b><u>Okienko confirm</u></b> - służy do tego, aby użytkownik coś potwierdził (OK zwraca true, Cancel zwraca false).</p>
+
+<p><b>2) Konwersje liczb</b></p>
+<p>Wczytanie zmiennej z użyciem <b><u>prompt</u></b> wykonywane jest jako <b>ciąg znaków</b>, dlatego aby wykonywać obliczenia, konieczna jest konwersja z ciągu znaków na wartości liczbowe:<br>
+<b><u>parseFloat(zmienna)</u></b> - konwersja zmiennej do typu float (liczba zmiennoprzecinkowa),<br>
+<b><u>parseInt(zmienna)</u></b> - konwersja zmiennej do typu int (liczba całkowita),<br>
+<b><u>toString(zmienna)</u></b> - konwersja zmiennej do typu łańcuchowego (tekstowego).</p>
+
+<p><b>3) Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad (trzy zasady):</b></p>
+<p><b><u>Zasada 1.</u></b> Nazwa zmiennej musi się zaczynać od litery, znaku "$" lub "_", może zawierać tylko litery (bez polskich znaków), cyfry oraz "$" i "_".<br>
+Poprawne nazwy: zmienna1, $wynik, _rozmiar, wynik1, Rekord, $_gracz.<br>
+Błędne nazwy: 1zmienna, wynik gry, wysokosc&amp;szerokosc, wynik.rekord, &amp;gracz, wysokość, imie+nazwisko.<br>
+<b><u>Zasada 2.</u></b> Wielkość liter ma znaczenie. Rekord i rekord to dwie różne zmienne!<br>
+<b><u>Zasada 3.</u></b> Nie wolno używać słów kluczowych JavaScript jako nazw zmiennych.</p>
+
+<p><b>4) Typy zmiennych w JavaScript</b></p>
+<p>W JavaScript nie definiuje się typów zmiennych tak jak w C++ - typ jest określany w trakcie przypisywania wartości. Podstawowe typy:<br>
+<b><u>Number</u></b> - typ liczbowy (liczby całkowite i zmiennoprzecinkowe),<br>
+<b><u>String</u></b> - typ tekstowy (łańcuch znaków),<br>
+<b><u>Boolean</u></b> - typ logiczny (true / false),<br>
+<b><u>Null</u></b> - pusta zawartość,<br>
+<b><u>Undefined</u></b> - typ niezidentyfikowany (zmienna bez przypisanej wartości),<br>
+<b><u>Object</u></b> - obiekt.</p>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

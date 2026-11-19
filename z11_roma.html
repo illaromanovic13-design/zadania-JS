@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 11 - Illia Romanovych</title>
+</head>
+<body>
+<div id="wynik">
+<script type="text/javascript">
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 11
+var dzien_urodzenia_roma = 29; // dzień urodzenia 29.08.2009 (rozmiar czcionki = 30 + dzień = 59)
+var D1_roma = prompt("D1=", "");
+var D2_roma = prompt("D2=", "");
+var sekund;
+var a = parseFloat(D1_roma);
+var b = parseFloat(D2_roma);
+sekund = (a - b) * 24 * 60 * 60;
+var rozmiar = 30 + dzien_urodzenia_roma;
+document.write('<span style="color:green;font-size:' + rozmiar + 'px;">Ilość sekund między dniami ' + a + ' i ' + b + ' = ' + sekund + '</span><br>');
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

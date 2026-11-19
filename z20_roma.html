@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 20 - Illia Romanovych</title>
+</head>
+<body>
+<script type="text/javascript">
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 20
+
+// pobranie współrzędnych punktów A(xa,ya) B(xb,yb) C(xc,yc) z sześciu okienek formularza
+function pobierz(id) { return parseFloat(document.getElementById(id).value); }
+// odległość między punktami F(x1,y1) i G(x2,y2): sqrt((x1-x2)^2 + (y1-y2)^2)
+function AB_rom(xa_rom, ya_rom, xb_rom, yb_rom)
+{
+  return Math.sqrt(Math.pow(xa_rom - xb_rom, 2) + Math.pow(ya_rom - yb_rom, 2));
+}
+function BC_rom(xb_rom, yb_rom, xc_rom, yc_rom)
+{
+  return Math.sqrt(Math.pow(xb_rom - xc_rom, 2) + Math.pow(yb_rom - yc_rom, 2));
+}
+function AC_rom(xa_rom, ya_rom, xc_rom, yc_rom)
+{
+  return Math.sqrt(Math.pow(xa_rom - xc_rom, 2) + Math.pow(ya_rom - yc_rom, 2));
+}
+function oblicz_boki()
+{
+  var xa_rom = pobierz("xa"), ya_rom = pobierz("ya");
+  var xb_rom = pobierz("xb"), yb_rom = pobierz("yb");
+  var xc_rom = pobierz("xc"), yc_rom = pobierz("yc");
+  document.getElementById("wynik").innerHTML =
+      "|AB| = " + AB_rom(xa_rom, ya_rom, xb_rom, yb_rom).toFixed(2) + "<br>" +
+      "|BC| = " + BC_rom(xb_rom, yb_rom, xc_rom, yc_rom).toFixed(2) + "<br>" +
+      "|AC| = " + AC_rom(xa_rom, ya_rom, xc_rom, yc_rom).toFixed(2);
+}
+</script>
+<h3>Długości boków trójkąta ABC</h3>
+A: xa=<input size="5" id="xa" value="0"> ya=<input size="5" id="ya" value="0"><br><br>
+B: xb=<input size="5" id="xb" value="4"> yb=<input size="5" id="yb" value="0"><br><br>
+C: xc=<input size="5" id="xc" value="0"> yc=<input size="5" id="yc" value="3"><br><br>
+<input type="button" value="oblicz" onclick="oblicz_boki()"><br><br>
+<div id="wynik" style="color:navy;font-size:30px;"></div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

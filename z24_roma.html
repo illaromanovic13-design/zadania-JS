@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 24 - Illia Romanovych</title>
+</head>
+<body>
+<div style="background:silver;color:blue;font-family:Arial,sans-serif;font-size:24px;display:inline-block;padding:8px 14px;">
+<script type="text/javascript">
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 24
+
+var x1_rom = parseFloat(prompt("x1=", ""));
+var x2_rom = parseFloat(prompt("x2=", ""));
+var liczba_liter_imienia = 5;                       // Illia
+var rad = (x1_rom * Math.PI) / 180;               // x1 ze stopni na radiany
+
+// y1 = 3 * x1^( n / (n+2) ), n = liczba liter imienia
+var y1 = 3 * Math.pow(x1_rom, liczba_liter_imienia / (liczba_liter_imienia + 2));
+// y2 = 2*cos(x1) + 3*sin(x1)   (x1 w stopniach -> radiany)
+var y2 = 2 * Math.cos(rad) + 3 * Math.sin(rad);
+// y3 = pierwiastek 3. stopnia z ( x1^5 + 2*x2^4 ) * |x1 - x2|
+var y3 = Math.cbrt(Math.pow(x1_rom, 5) + 2 * Math.pow(x2_rom, 4)) * Math.abs(x1_rom - x2_rom);
+
+document.write("wczytane liczby:<br>");
+document.write("x1 = " + x1_rom + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x2 = " + x2_rom + "<br>");
+document.write("w stopniach x1 = " + x1_rom + " [stopniach] &nbsp; x1 = " + rad.toFixed(2) + " [radianach]<br>");
+document.write("y1 = " + y1.toFixed(2) + "<br>");
+document.write("y2 = " + y2.toFixed(2) + "<br>");
+document.write("y3 = " + y3.toFixed(2) + "<br>");
+</script>
+</div><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 22 - Illia Romanovych</title>
+</head>
+<body>
+<script type="text/javascript">
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 22
+
+function Pole_romanovych(a_rom, b_rom)
+{
+  return a_rom * b_rom;
+}
+function obwod_romanovych(a_rom, b_rom)
+{
+  return 2 * (a_rom + b_rom);
+}
+function oblicz_prostokat()
+{
+  var a_rom = parseFloat(document.getElementById("a_dana_rom").value);
+  var b_rom = parseFloat(document.getElementById("b_dana_rom").value);
+  var P = Pole_romanovych(a_rom, b_rom);
+  var O = obwod_romanovych(a_rom, b_rom);
+  // do tabeli
+  document.getElementById("wyprowadz_pole_rom").innerHTML = "Pole = " + P.toFixed(2) + " cm^2";
+  document.getElementById("wyprowadz_obwod_rom").innerHTML = "Obwód = " + O.toFixed(2) + " cm";
+  // do pól Input
+  document.getElementById("pole").value = P.toFixed(2);
+  document.getElementById("obw").value = O.toFixed(2);
+}
+</script>
+<h3>Obliczenie pola oraz obwodu prostokąta</h3>
+Podaj a= <input size="6" id="a_dana_rom" value="3"> cm &nbsp;&nbsp;
+Podaj b= <input size="6" id="b_dana_rom" value="5"> cm<br><br>
+<input type="button" value="oblicz" onclick="oblicz_prostokat()"><br><br>
+Pole= <input size="8" id="pole"> &nbsp;&nbsp; Obwód= <input size="8" id="obw"><br><br>
+<table border="1" cellpadding="6" style="border-collapse:collapse">
+<tr><td id="wyprowadz_pole_rom"></td></tr>
+<tr><td id="wyprowadz_obwod_rom"></td></tr>
+</table>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

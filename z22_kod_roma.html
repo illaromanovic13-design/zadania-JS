@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 22 - KOD - Illia Romanovych</title>
+</head>
+<body>
+<textarea cols="90" rows="26">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Zadanie 22 - Illia Romanovych&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 22
+
+function Pole_romanovych(a_rom, b_rom)
+{
+  return a_rom * b_rom;
+}
+function obwod_romanovych(a_rom, b_rom)
+{
+  return 2 * (a_rom + b_rom);
+}
+function oblicz_prostokat()
+{
+  var a_rom = parseFloat(document.getElementById("a_dana_rom").value);
+  var b_rom = parseFloat(document.getElementById("b_dana_rom").value);
+  var P = Pole_romanovych(a_rom, b_rom);
+  var O = obwod_romanovych(a_rom, b_rom);
+  // do tabeli
+  document.getElementById("wyprowadz_pole_rom").innerHTML = "Pole = " + P.toFixed(2) + " cm^2";
+  document.getElementById("wyprowadz_obwod_rom").innerHTML = "Obwód = " + O.toFixed(2) + " cm";
+  // do pól Input
+  document.getElementById("pole").value = P.toFixed(2);
+  document.getElementById("obw").value = O.toFixed(2);
+}
+&lt;/script&gt;
+&lt;h3&gt;Obliczenie pola oraz obwodu prostokąta&lt;/h3&gt;
+Podaj a= &lt;input size="6" id="a_dana_rom" value="3"&gt; cm &amp;nbsp;&amp;nbsp;
+Podaj b= &lt;input size="6" id="b_dana_rom" value="5"&gt; cm&lt;br&gt;&lt;br&gt;
+&lt;input type="button" value="oblicz" onclick="oblicz_prostokat()"&gt;&lt;br&gt;&lt;br&gt;
+Pole= &lt;input size="8" id="pole"&gt; &amp;nbsp;&amp;nbsp; Obwód= &lt;input size="8" id="obw"&gt;&lt;br&gt;&lt;br&gt;
+&lt;table border="1" cellpadding="6" style="border-collapse:collapse"&gt;
+&lt;tr&gt;&lt;td id="wyprowadz_pole_rom"&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td id="wyprowadz_obwod_rom"&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/&gt;
+&lt;script type="text/javascript"&gt;
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 17 - Illia Romanovych</title>
+</head>
+<body>
+<h2>Zadanie 17 - zadanie teoretyczne</h2>
+<p><b><u>1. Wymień cztery sposoby wyprowadzania danych w JS</u></b><br>Cztery sposoby wyprowadzania danych na stronę:<br>- z użyciem <b>document.write()</b>,<br>- z użyciem okienka <b>alert()</b>,<br>- do <b>okienek formularza</b> (np. pole input, właściwość value),<br>- do <b>tabeli</b> (np. z użyciem innerHTML).</p>
+<p><b><u>2. Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?</u></b><br>a) Jest to <b>zbiór zgrupowanych instrukcji</b>, które możemy uruchamiać poprzez podanie ich nazwy,<br>b) każda funkcja po wywołaniu <b>wykonuje swój wewnętrzny kod</b>,<br>c) funkcja może mieć <b>argumenty</b>, które wchodzą do wnętrza funkcji i są tam przetwarzane, np. suma_rom(a, b),<br>d) może (nie zawsze) <b>zwrócić obliczoną wartość</b> zapisaną po słowie kluczowym <b>return</b>.</p>
+<p><b><u>3. Omów metody getElementsByName, getElementById, getElementsByTagName</u></b></p>
+<table border="1" cellpadding="5" style="border-collapse:collapse">
+<tr><th>Metoda</th><th>Opis</th></tr>
+<tr><td><b>getElementById("id")</b></td><td>dostęp do elementu o konkretnej wartości atrybutu <b>id</b> (id jest unikalne, zwracany jest jeden element)</td></tr>
+<tr><td><b>getElementsByTagName("znacznik")</b></td><td>dostęp do wszystkich elementów o danym typie znacznika, np. P lub DIV (zwraca kolekcję elementów)</td></tr>
+<tr><td><b>getElementsByName("nazwa")</b></td><td>dostęp do wszystkich elementów o konkretnej wartości atrybutu <b>name</b> (zwraca kolekcję; pierwszy element: [0])</td></tr>
+</table>
+<p><b><u>4. Omów właściwości innerHTML, innerText, className (każdą osobno)</u></b><br><b><u>innerHTML</u></b> - właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie albo usunięcie kodu HTML z danego elementu HTML, np. w tabeli,<br><b><u>innerText</u></b> - umożliwia określenie ciągu znaków (zwykłego tekstu), który zostanie umieszczony w elemencie,<br><b><u>className</u></b> - umożliwia określenie klasy CSS użytej do prezentacji elementu.</p>
+<p><b>Przykład:</b></p>
+<textarea cols="70" rows="9">&lt;div id="nazwa"&gt;&lt;/div&gt;
+&lt;script&gt;
+  document.getElementById("nazwa").innerHTML = "Witaj";
+  document.getElementById("nazwa").className = "wyroznienieCzerwone";
+&lt;/script&gt;</textarea><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/>
+<script type="text/javascript">
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+</script>
+</body>
+</html>

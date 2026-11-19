@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 18 - KOD - Illia Romanovych</title>
+</head>
+<body>
+<textarea cols="90" rows="26">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Użycie funkcji - Zadanie 18&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="color:navy;font-size:50px;"&gt;
+&lt;script type="text/javascript"&gt;
+// Illia Romanovych nr 21  19.11.2026
+// Zadanie 18
+
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+
+function suma_rom(a, b) {
+    return a + b;
+}
+function odejmowanie_rom(a, b) {
+    return a - b;
+}
+function mnozenie_rom(a, b) {
+    return a * b;
+}
+function od_kwadratu_rom(a, b) {
+    return a + "^2 = " + (a * a) + "&lt;br&gt;" + b + "^2 = " + (b * b);
+}
+function reszta_z_dzielenia_a_przez_b_rom(a, b) {
+    return a % b;
+}
+
+document.write("suma=" + suma_rom(a, b) + "&lt;br&gt;");
+document.write("różnica=" + odejmowanie_rom(a, b) + "&lt;br&gt;");
+document.write("iloczyn=" + mnozenie_rom(a, b) + "&lt;br&gt;");
+document.write(od_kwadratu_rom(a, b) + "&lt;br&gt;");
+document.write("reszta z dzielenia a przez b=" + reszta_z_dzielenia_a_przez_b_rom(a, b) + "&lt;br&gt;");
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_romanovych()"/&gt;
+&lt;script type="text/javascript"&gt;
+function okno_zamknij_romanovych()
+{
+  window.close()
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</body>
+</html>
